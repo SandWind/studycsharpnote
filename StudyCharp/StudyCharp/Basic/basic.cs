@@ -59,6 +59,38 @@ namespace StudyCharp.Basic
                 }
            }
 
+            public string this[float Index]
+            {
+                set
+                {
+                    switch (Index)
+                    {
+                        case 0:
+                            this.Name = value;
+                            break;
+                        case 1:
+                            this.Work = value;
+                            break;
+                        case 2:
+                            this.Address = value;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                get
+                {
+                    switch (Index)
+                    {
+                        case 0: return Name;
+                        case 1: return Work;
+                        case 2: return Address;
+                        default: return this.Name;
+                    }
+                }
+            }
+
         }
 
         private RandomNumberClass Rn;

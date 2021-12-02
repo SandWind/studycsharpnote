@@ -19,9 +19,6 @@ namespace StudyCharp
 
             stu.getMulitFiledContent();
             Console.ReadKey();
-        }
-
-        
-      
+        }      
     }   
 }
