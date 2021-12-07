@@ -59,19 +59,19 @@ namespace StudyCharp.Basic
                 }
            }
 
-            public string this[float Index]
-            {
+           public string this[float Index]
+           {
                 set
                 {
                     switch (Index)
                     {
-                        case 0:
+                        case 1.1f:
                             this.Name = value;
                             break;
-                        case 1:
+                        case 1.2f:
                             this.Work = value;
                             break;
-                        case 2:
+                        case 2.3f:
                             this.Address = value;
                             break;
                         default:
@@ -83,13 +83,13 @@ namespace StudyCharp.Basic
                 {
                     switch (Index)
                     {
-                        case 0: return Name;
-                        case 1: return Work;
-                        case 2: return Address;
+                        case 1.1f: return Name;
+                        case 1.2f: return Work;
+                        case 2.3f: return Address;
                         default: return this.Name;
                     }
                 }
-            }
+           }
 
         }
 
@@ -112,6 +112,11 @@ namespace StudyCharp.Basic
             Mu[1] = "developer";
             Mu[2] = "runway station";
             Console.WriteLine("{0},{1},{2}", Mu[0], Mu[1], Mu[2]);
+
+            Mu[1.1f] = "jacky";
+            Mu[1.2f] = "developer,woker";
+            Mu[2.3f] = "runway station,hospitail";
+            Console.WriteLine("{0},{1},{2}", Mu[1.1f], Mu[1.2f], Mu[2.3f]);
         }
     }
 
